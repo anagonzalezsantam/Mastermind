@@ -41,8 +41,8 @@
         <div class="sect2">
           <h3 id="vocabulario">Vocabulario</h3>
           <div class="imageblock">
-            <div class="content">
-              <img src="images/diagrama_clases.png" alt="MastermindClases" width="950" height="1400">
+            <div class="content" style="text-align: center">
+              <img src="images/diagrama_clases.png" alt="MastermindClases" width="770" height="1122">
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
           <h3 id="estado-inicial">Estado Inicial. Primera propuesta de la combinación.</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_objetos_inicial.png" alt="estadoInicialMastermind" width="1094" height="492">
+              <img src="images/diagrama_objetos_inicial.png" alt="estadoInicialMastermind" width="1100" height="566">
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
           <h3 id="estado-final-objetivo-tictactoe-en-3ª-fila">Estado Final. Insertar combinación correcta.</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_objetos_final.png" alt="estadoFinalMastermind" width="1131" height="587">
+              <img src="images/diagrama_objetos_final.png" alt="estadoFinalMastermind" width="1200" height="842">
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
           <h3 id="instrucciones">Instrucciones</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_estados.png" alt="instructions" width="371" height="764">
+              <img src="images/diagrama_estados.png" alt="instructions" width="300" height="650">
             </div>
           </div>
         </div>
