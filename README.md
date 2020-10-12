@@ -50,7 +50,7 @@
           <h3 id="estado-inicial">Estado Inicial. Primera propuesta de la combinación.</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_estado_inicial.png" alt="estadoInicialMastermind" width="1094" height="492">
+              <img src="images/diagrama_objetos_inicial.png" alt="estadoInicialMastermind" width="1094" height="492">
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
           <h3 id="estado-final-objetivo-tictactoe-en-3ª-fila">Estado Final. Insertar combinación correcta.</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_estado_final.png" alt="estadoFinalMastermind" width="1131" height="587">
+              <img src="images/diagrama_objetos_final.png" alt="estadoFinalMastermind" width="1131" height="587">
             </div>
           </div>
         </div>
