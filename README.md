@@ -35,7 +35,7 @@
       <div class="sectionbody">
         <div class="imageblock">
           <div class="content">
-            <img src="images/mastermind.png" alt="Mastermind">
+            <img src="images/Mastermind.jpg" alt="Mastermind">
           </div>
         </div>
         <div class="sect2">
