@@ -42,7 +42,7 @@
           <h3 id="vocabulario">Vocabulario</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/diagrama_clases.png" alt="MastermindClases" width="770" height="1122">
+              <img src="images/diagrama_clases.png" alt="MastermindClases" width="800" height="1165">
             </div>
           </div>
         </div>
