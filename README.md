@@ -40,8 +40,8 @@
         </div>
         <div class="sect2">
           <h3 id="vocabulario">Vocabulario</h3>
-          <div class="imageblock">
-            <div class="content" style="text-align: center">
+          <div class="imageblock" style="text-align: center">
+            <div class="content">
               <img src="images/diagrama_clases.png" alt="MastermindClases" width="770" height="1122">
             </div>
           </div>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="sect2">
-          <h3 id="estado-final-objetivo-tictactoe-en-3ª-fila">Estado Final. Insertar combinación correcta.</h3>
+          <h3 id="estado-final">Estado Final. Insertar combinación correcta.</h3>
           <div class="imageblock">
             <div class="content">
               <img src="images/diagrama_objetos_final.png" alt="estadoFinalMastermind" width="1200" height="842">
