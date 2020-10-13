@@ -23,6 +23,6 @@ public class Result {
 	
 	@Override
 	public String toString() {
-		return this.blacks + " black and " + this.whites + " whites";
+		return this.blacks + " black and " + this.whites + " white";
 	}
 }

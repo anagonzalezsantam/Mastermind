@@ -16,9 +16,8 @@ public class Mastermind {
 		} while (this.resumeGame);
 	}
 	
-	public void playGame() {
+	private void playGame() {
 		Messages.TITTLE.writeln();
-		Console.instance().writeln(this.board.printSecretCombination());
 		this.board.writeResults();
 		
 		do {	

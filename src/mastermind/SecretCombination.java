@@ -21,14 +21,6 @@ public class SecretCombination extends Combination{
 		}
 		return colors;
 	}
-	
-	public String toString() {
-		String string = "";
-		for(String color : this.colors) {
-			string += color;
-		}
-		return string;
-	}
-	
+		
 	
 }

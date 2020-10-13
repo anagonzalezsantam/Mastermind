@@ -25,7 +25,7 @@ public class Board {
 		compareCombinations(proposed);
 	}
 	
-	public void compareCombinations(ProposedCombination proposed) {
+	private void compareCombinations(ProposedCombination proposed) {
 		Result result = new Result();
 		ArrayList<String> secret_copy = (ArrayList<String>) secret.getList().clone();
 		for(int i = 0; i < 4; i++) {
@@ -43,14 +43,11 @@ public class Board {
 		resultList.add(result);
 	}
 	
-	public String getPropositionResult(int index) {
+	private String getPropositionResult(int index) {
 		String string = this.proposedList.get(index).toString() + " ---> " + this.resultList.get(index).toString();
 		return string;
 	}
 	
-	public String printSecretCombination() {
-		return this.secret.toString();
-	}
 	
 	public void writeResults() {
 		Console.instance().write(this.getAttemptNumber());
