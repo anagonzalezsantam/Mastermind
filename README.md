@@ -38,12 +38,7 @@
             <col style="width: 50%;">
           </colgroup>
           <tbody>
-            <tr>
-              <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
-                <div class="content">
-                  <img src="images/Mastermind.jpg" alt="Mastermind" width="430" height="460">
-                </div>
-              </td>
+            <tr>     
               <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
                 <ul>
                   <li>
@@ -58,6 +53,11 @@
                     </div> 
                   </li>
                 </ul>
+              </td>
+              <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+                <div class="content">
+                  <img src="images/Mastermind.jpg" alt="Mastermind" width="430" height="460">
+                </div>
               </td>
             </tr>
           </tbody>
