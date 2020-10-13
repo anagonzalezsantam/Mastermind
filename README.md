@@ -46,7 +46,7 @@
           <h3 id="arquitectura">Arquitectura</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/arquitectura.png" alt="MastermindArquitecture" width="300" height="465">
+              <img src="images/arquitectura.png" alt="MastermindArquitecture" width="250" height="390">
             </div>
           </div>
         </div>
