@@ -32,11 +32,36 @@
     <div class="sect1">
       <h2 id="requisitos-1-básica">Requisitos 1. Básica</h2>
       <div class="sectionbody">
-        <div class="imageblock">
-          <div class="content">
-            <img src="images/Mastermind.jpg" alt="Mastermind" width="430" height="460">
-          </div>
-        </div>
+        <table class="tableblock frame-all grid-all stretch">
+          <colgroup>
+            <col style="width: 50%;">
+            <col style="width: 50%;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+                <div class="content">
+                  <img src="images/Mastermind.jpg" alt="Mastermind" width="430" height="460">
+                </div>
+              </td>
+              <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+                <ul>
+                  <li>
+                    <p><a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)"><strong>Wiki</strong></a> - <a href="https://www.youtube.com/watch?v=2-hTeg2M6GQ"><strong>Youtube</strong></a></p>
+                    <div class="ulist">
+                      <ul>
+                        <li><p><em>Funcionalidad: <strong>Básica</strong></em></p></li>
+                        <li><p><em>Interfaz: <strong>Texto</strong></em></p></li>
+                        <li><p><em>Distribución: <strong>Stand Alone</strong></em></p></li>
+                        <li><p><em>Persistencia: <strong>No</strong></em></p></li>
+                      </ul>
+                    </div> 
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <div class="sect1">
