@@ -54,7 +54,7 @@
           <h3 id="paquete-mastermind">Paquete <em>Mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_clases_domainModel.png" alt="classesMastermind" width="1100" height="566">
+              <img src="images/diagrama_clases_domainModel.png" alt="classesMastermind" width="1200" height="1425">
             </div>
           </div>
         </div>
