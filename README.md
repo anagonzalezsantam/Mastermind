@@ -80,7 +80,7 @@
           <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete mastermind.png" alt="paqueteMastermind" width="300" height="250">
+              <img src="images/paquete mastermind.png" alt="paqueteMastermind" width="350" height="290">
             </div>
           </div>
         </div>
