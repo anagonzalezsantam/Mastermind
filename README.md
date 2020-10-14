@@ -23,6 +23,7 @@
           <ul class="sectlevel2">
             <li><a href="#arquitectura">Arquitectura</a></li>
             <li><a href="#paquete-mastermind">Paquete <em>Mastermind</em></a></li>
+            <li><a href="#paquete-models-y-views">Paquetes <em>mastermind.models</em> y <em>mastermind.views</em></a></li>
           </ul>
         </li>
       </ul>
@@ -76,10 +77,18 @@
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-mastermind">Paquete <em>Mastermind</em></h3>
+          <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/diagrama_clases_domainModel.png" alt="classesMastermind" width="1200" height="1425">
+              <img src="images/paquete mastermind.png" alt="paqueteMastermind" width="1200" height="1425">
+            </div>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="paquete-models-y-views">Paquetes <em>mastermind.models</em> y <em>mastermind.views</em></h3>
+          <div class="imageblock">
+            <div class="content">
+              <img src="images/diagrama_clases.png" alt="classesMastermind" width="1200" height="1425">
             </div>
           </div>
         </div>
