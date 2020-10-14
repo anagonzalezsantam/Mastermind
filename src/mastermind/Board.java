@@ -34,7 +34,8 @@ public class Board {
 				secret_copy.remove(proposed.getList().get(i));
 			} 
 		}
-		for (int i = 0; i < secret_copy.size(); i++) {
+		int secret_copy_size = secret_copy.size();
+		for (int i = 0; i < secret_copy_size; i++) {
 			if(secret_copy.contains(proposed.getList().get(i))) {
 				result.sumWhites();
 				secret_copy.remove(proposed.getList().get(i));
