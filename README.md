@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Mastermind. Solución 1.1. domainModel</h1>
+  <h1>Mastermind. Solución 1.2. documentView</h1>
   <div class="details">
     <span id="author" class="author">Ana González Santamaría</span><br>
     <span id="email" class="email"><a href="mailto:ana97gs@gmail.com">ana97gs@gmail.com</a></span><br>
