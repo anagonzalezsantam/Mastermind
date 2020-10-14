@@ -72,7 +72,7 @@
           <h3 id="arquitectura">Arquitectura</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/arquitectura.png" alt="MastermindArquitecture" width="250" height="390">
+              <img src="images/arquitectura.png" alt="MastermindArquitecture" width="350" height="520">
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
           <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete mastermind.png" alt="paqueteMastermind" width="1200" height="1425">
+              <img src="images/paquete mastermind.png" alt="paqueteMastermind" width="200" height="168">
             </div>
           </div>
         </div>
