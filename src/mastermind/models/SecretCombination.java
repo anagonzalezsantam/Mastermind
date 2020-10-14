@@ -1,4 +1,4 @@
-package mastermind;
+package mastermind.models;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,6 +21,5 @@ public class SecretCombination extends Combination{
 		}
 		return colors;
 	}
-		
-	
+
 }

@@ -1,4 +1,4 @@
-package mastermind;
+package mastermind.models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,5 +28,5 @@ public class ProposedCombination extends Combination{
 		}
 		return true;
 	}
-	
+
 }

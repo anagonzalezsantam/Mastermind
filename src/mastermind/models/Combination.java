@@ -1,9 +1,8 @@
-package mastermind;
+package mastermind.models;
 
 import java.util.ArrayList;
 
 public class Combination {
-	
 	protected ArrayList<String> colors;
 	private static final String BLUE = "b";
 	private static final String RED = "r";
@@ -11,10 +10,6 @@ public class Combination {
 	private static final String YELLOW = "y";
 	private static final String ORANGE = "o";
 	private static final String PURPLE = "p";
-	
-	public Combination() {
-		this.colors = new ArrayList<>();
-	}
 	
 	public Combination(ArrayList<String> colors) {
 		this.colors = colors;

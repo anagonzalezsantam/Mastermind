@@ -1,4 +1,4 @@
-package mastermind;
+package mastermind.models;
 
 public class Result {
 	private int whites;
@@ -21,8 +21,11 @@ public class Result {
 		return this.blacks == 4;
 	}
 	
-	@Override
-	public String toString() {
-		return this.blacks + " black and " + this.whites + " white";
+	public int getBlacks() {
+		return this.blacks;
+	}
+	
+	public int getWhites() {
+		return this.whites;
 	}
 }

@@ -1,11 +1,8 @@
-package mastermind;
+package mastermind.models;
 
 import java.util.ArrayList;
 
-import utils.Console;
-
 public class Board {
-	
 	private SecretCombination secret;
 	private ArrayList<ProposedCombination> proposedList;
 	private ArrayList<Result> resultList;
@@ -34,7 +31,8 @@ public class Board {
 				secret_copy.remove(proposed.getList().get(i));
 			} 
 		}
-		for (int i = 0; i < secret_copy.size(); i++) {
+		int secret_copy_size = secret_copy.size();
+		for (int i = 0; i < secret_copy_size; i++) {
 			if(secret_copy.contains(proposed.getList().get(i))) {
 				result.sumWhites();
 				secret_copy.remove(proposed.getList().get(i));
@@ -43,25 +41,32 @@ public class Board {
 		resultList.add(result);
 	}
 	
-	private String getPropositionResult(int index) {
-		String string = this.proposedList.get(index).toString() + " ---> " + this.resultList.get(index).toString();
-		return string;
-	}
-	
-	
-	public void writeResults() {
-		Console.instance().write(this.getAttemptNumber());
-		Messages.ATTEMPT.writeln();
-		Messages.SEPARATOR.writeln();
-		for(int i=0; i<this.getAttemptNumber(); i++) {
-			Console.instance().writeln(getPropositionResult(i));
-		}
-	}
 	
 	public boolean isWinner() {
 		if(resultList.size() > 0) {
 			return resultList.get(resultList.size() - 1).isWinner();			
 		} 
 		return false;
+	}
+	
+	public String getProposedCombination(int index) {
+		ProposedCombination proposed = this.proposedList.get(index);
+		return proposed.toString();
+	}
+	
+	public int getBlacks(int index) {
+		Result result = this.resultList.get(index);
+		return result.getBlacks();
+	}
+	
+	public int getWhites(int index) {
+		Result result = this.resultList.get(index);
+		return result.getWhites();
+	}
+	
+	public void reset() {
+		secret = new SecretCombination();
+		proposedList = new ArrayList<>();
+		resultList = new ArrayList<>();
 	}
 }

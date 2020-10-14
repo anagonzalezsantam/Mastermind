@@ -1,4 +1,4 @@
-package mastermind;
+package mastermind.views;
 
 import utils.Console;
 
