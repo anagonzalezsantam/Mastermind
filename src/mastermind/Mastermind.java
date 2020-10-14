@@ -39,7 +39,7 @@ public class Mastermind {
 		if(this.board.isWinner()) {
 			Messages.WINNER.writeln();
 		} else {
-			Messages.LOSSER.writeln();
+			Messages.LOOSER.writeln();
 		}
 		String answer = Console.instance().readString(Messages.RESUME.toString());
 		Messages.LINE.writeln();

@@ -8,7 +8,7 @@ enum Messages {
 	SEPARATOR("XXXX"), 
 	PROPOSITION("Propose a combination: "), 
 	WINNER("You've won!!! ;-)"),
-	LOSSER("You've lost!!! :-("),
+	LOOSER("You've lost!!! :-("),
 	RESUME("RESUME? (y/n):"),
 	LINE("");
 
