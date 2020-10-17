@@ -1,14 +1,13 @@
 package mastermind;
 
 import mastermind.models.Board;
-import mastermind.views.View;
+import mastermind.views.console.View;
 
-public class Mastermind {
-	
+public class ConsoleMastermind {
 	private Board board;
 	private View view;
 
-	public Mastermind() {
+	public ConsoleMastermind() {
 		this.board = new Board();
 		this.view = new View(this.board);
 	}
@@ -18,6 +17,6 @@ public class Mastermind {
 	}
 
 	public static void main(String[] args) {
-		new Mastermind().play();
+		new ConsoleMastermind().play();
 	}
 }

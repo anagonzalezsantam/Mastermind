@@ -33,9 +33,8 @@ public class SecretCombination extends Combination{
 		}
 		int secret_copy_size = secret_copy.size();
 		for (int i = 0; i < secret_copy_size; i++) {
-			if(secret_copy.contains(proposed.getList().get(i))) {
+			if(proposed.getList().contains(secret_copy.get(i))) {
 				result.sumWhites();
-				secret_copy.remove(proposed.getList().get(i));
 			}
 		}
 		return result;

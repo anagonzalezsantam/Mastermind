@@ -1,6 +1,7 @@
-package mastermind.views;
+package mastermind.views.console;
 
 import mastermind.models.Board;
+import mastermind.views.Messages;
 import utils.Console;
 
 public class PlayView {

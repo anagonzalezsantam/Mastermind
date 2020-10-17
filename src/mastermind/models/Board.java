@@ -51,4 +51,5 @@ public class Board {
 		proposedList = new ArrayList<>();
 		resultList = new ArrayList<>();
 	}
+	
 }

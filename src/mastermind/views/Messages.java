@@ -2,7 +2,7 @@ package mastermind.views;
 
 import utils.Console;
 
-enum Messages {
+public enum Messages {
 	TITTLE("--- MASTERMIND ---"),
 	ATTEMPT("#number attempt(s):"), 
 	SEPARATOR("XXXX"), 
@@ -23,19 +23,19 @@ enum Messages {
 		this.message = message;
 	}
 
-	void write() {
+	public void write() {
 		Console.instance().write(this.message);
 	}
 
-	void writeln() {
+	public void writeln() {
 		Console.instance().writeln(this.message);
 	}
 
-	void writeln(int num) {
+	public void writeln(int num) {
 		Console.instance().writeln(this.message.replaceAll("#number", String.valueOf(num)));
 	}
 	
-	void writeln(int numB, int numW) {
+	public void writeln(int numB, int numW) {
 		Console.instance().writeln(this.message.replaceAll("#num_b", String.valueOf(numB)).replaceAll("#num_w", String.valueOf(numW)));
 	}
 

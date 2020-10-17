@@ -1,7 +1,8 @@
-package mastermind.views;
+package mastermind.views.console;
 
 import mastermind.models.Board;
 import utils.Console;
+import mastermind.views.Messages;
 
 public class AttemptView {
 	

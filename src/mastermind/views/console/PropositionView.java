@@ -1,7 +1,9 @@
-package mastermind.views;
+package mastermind.views.console;
 
 import mastermind.models.Board;
 import mastermind.models.ProposedCombination;
+import mastermind.views.Messages;
+import mastermind.views.Error;
 import utils.Console;
 
 public class PropositionView {

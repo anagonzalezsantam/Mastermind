@@ -2,7 +2,7 @@ package mastermind.views;
 
 import utils.Console;
 
-enum Error {
+public enum Error {
 	WRONG_SIZE("Wrong proposed combination length"),
 	WRONG_COLOR("Wrong color, they must be: rybgpo");
 
@@ -16,11 +16,11 @@ enum Error {
 		this.error = error;
 	}
 
-	void write() {
+	public void write() {
 		Console.instance().write(this.error);
 	}
 
-	void writeln() {
+	public void writeln() {
 		Console.instance().writeln(this.error);
 	}
 
