@@ -25,19 +25,20 @@ public class SecretCombination extends Combination{
 	public Result compareCombinations(ProposedCombination proposed) {
 		Result result = new Result();
 		ArrayList<String> secret_copy = (ArrayList<String>) this.getList().clone();
+		ArrayList<String> proposed_copy = (ArrayList<String>) proposed.getList().clone();
 		for(int i = 0; i < MAX_SIZE; i++) {
 			if(proposed.getList().get(i).equals(this.getList().get(i))) {
 				result.sumBlacks();
-				secret_copy.remove(proposed.getList().get(i));
+				secret_copy.remove(this.getList().get(i));
+				proposed_copy.remove(proposed.getList().get(i));
 			} 
 		}
-		int secret_copy_size = secret_copy.size();
-		for (int i = 0; i < secret_copy_size; i++) {
-			if(proposed.getList().contains(secret_copy.get(i))) {
+		for (int i = 0; i < secret_copy.size(); i++) {
+			if(proposed_copy.contains(secret_copy.get(i))) {
 				result.sumWhites();
 			}
 		}
 		return result;
 	}
-
+	
 }

@@ -3,19 +3,13 @@ package mastermind;
 import mastermind.models.Board;
 import mastermind.views.console.View;
 
-public class ConsoleMastermind {
-	private Board board;
-	private View view;
+public class ConsoleMastermind extends Mastermind {
 
-	public ConsoleMastermind() {
-		this.board = new Board();
-		this.view = new View(this.board);
+	@Override
+	protected View createView(Board board) {
+		return new View(board);
 	}
-
-	private void play() {
-		this.view.interact();
-	}
-
+	
 	public static void main(String[] args) {
 		new ConsoleMastermind().play();
 	}
