@@ -1,19 +1,22 @@
 package mastermind.views.console;
 
+import mastermind.controllers.AttemptController;
+import mastermind.controllers.PlayController;
+import mastermind.controllers.PropositionController;
 import mastermind.models.Board;
 import mastermind.views.Messages;
 import utils.Console;
 
 public class PlayView {
 
-	private Board board;
+	private PlayController playController;
 	private AttemptView attemptView;
 	private PropositionView propositionView;
 	
-	public PlayView(Board board) {
-		this.board = board;
-		this.attemptView = new AttemptView(this.board);
-		this.propositionView = new PropositionView(this.board);
+	public PlayView(PlayController playController, AttemptController attemptController, PropositionController propositionController) {
+		this.playController = playController;
+		this.attemptView = new AttemptView(attemptController);
+		this.propositionView = new PropositionView(propositionController);
 	}
 	
 	public void interact() {
@@ -23,9 +26,9 @@ public class PlayView {
 			this.propositionView.interact();
 			this.attemptView.interact();
 			
-		} while (this.board.getAttemptNumber() < 10 && !this.board.isWinner());
+		} while (this.playController.getAttemptNumber() < 10 && !this.playController.isWinner());
 		
-		if(this.board.isWinner()) {
+		if(this.playController.isWinner()) {
 			Messages.WINNER.writeln();
 		} else {
 			Messages.LOOSER.writeln();

@@ -1,22 +1,23 @@
 package mastermind.views.console;
 
+import mastermind.controllers.ResumeController;
 import mastermind.models.Board;
 import mastermind.views.Messages;
 import utils.Console;
 
 public class ResumeView {
 	
-	private Board board;
+	private ResumeController resumeController;
 	
-	public ResumeView (Board board) {
-		this.board = board;
+	public ResumeView (ResumeController resumeController) {
+		this.resumeController = resumeController;
 	}
 	
 	public boolean interact() {
 		String answer = Console.instance().readString(Messages.RESUME.toString());
 		Messages.LINE.writeln();
 		if(answer.toLowerCase().equals("y")) {
-			this.board.reset();
+			this.resumeController.reset();
 			return true;
 		}
 		return false;

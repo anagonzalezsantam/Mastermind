@@ -1,5 +1,6 @@
 package mastermind.views.console;
 
+import mastermind.controllers.PropositionController;
 import mastermind.models.Board;
 import mastermind.models.ProposedCombination;
 import mastermind.views.Messages;
@@ -8,10 +9,10 @@ import utils.Console;
 
 public class PropositionView {
 	
-	private Board board;
+	private PropositionController propositionController;
 	
-	public PropositionView(Board board) {
-		this.board = board;
+	public PropositionView(PropositionController propositionController) {
+		this.propositionController = propositionController;
 	}
 	
 	public void interact() {
@@ -24,6 +25,6 @@ public class PropositionView {
 			}
 			proposed = new ProposedCombination(Console.instance().readString(Messages.PROPOSITION.toString()));
 		}
-		this.board.addProposedCombination(proposed);
+		this.propositionController.addProposedCombination(proposed);
 	}
 }
