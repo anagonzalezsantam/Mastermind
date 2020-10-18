@@ -1,11 +1,12 @@
 package mastermind.controllers;
 
 import mastermind.models.Board;
+import mastermind.models.State;
 
 public class AttemptController extends Controller{
 
-	public AttemptController(Board board) {
-		super(board);
+	public AttemptController(Board board, State state) {
+		super(board, state);
 	}
 	
 	public String getProposedCombination(int index) {

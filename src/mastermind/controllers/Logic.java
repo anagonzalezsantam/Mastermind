@@ -1,49 +1,30 @@
 package mastermind.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import mastermind.models.Board;
-import mastermind.models.ProposedCombination;
+import mastermind.models.State;
+import mastermind.models.StateValues;
 
 public class Logic {
 
 	private Board board;
-	private AttemptController attemptController;
-	private PlayController playController;
-	private PropositionController propositionController;
-	private ResumeController resumeControler;
+	private State state;
+	private Map<StateValues, Controller> controllers;
 	
 	public Logic() {
 		this.board = new Board();
-		this.attemptController = new AttemptController(this.board);
-		this.playController = new PlayController(this.board); 
-		this.propositionController = new PropositionController(this.board);
-		this.resumeControler = new ResumeController(this.board);
+		this.state = new State();
+		this.controllers = new HashMap<StateValues, Controller>();
+		this.controllers.put(StateValues.INITIAL, new PlayController(this.board, this.state));
+		this.controllers.put(StateValues.RESULTS, new AttemptController(this.board, this.state));
+		this.controllers.put(StateValues.PROPOSITION, new PropositionController(this.board, this.state));
+		this.controllers.put(StateValues.FINISH, new ResumeController(this.board, this.state));
+		this.controllers.put(StateValues.EXIT, null);
 	}
 	
-	public int getAttemptNumber() {
-		return this.playController.getAttemptNumber();
-	}
-	
-	public boolean isWinner() {
-		return this.playController.isWinner();
-	}
-	
-	public String getProposedCombination(int index) {
-		return this.attemptController.getProposedCombination(index);
-	}
-	
-	public int getBlacks(int index) {
-		return this.attemptController.getBlacks(index);
-	}
-	
-	public int getWhites(int index) {
-		return this.attemptController.getWhites(index);
-	}
-	
-	public void addProposedCombination(ProposedCombination proposed) {
-		this.propositionController.addProposedCombination(proposed);
-	}
-	
-	public void reset() {
-		this.resumeControler.reset();
+	public Controller getController() {
+		return this.controllers.get(this.state.getStateValue());
 	}
 }
