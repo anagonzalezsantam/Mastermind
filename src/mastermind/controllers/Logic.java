@@ -11,8 +11,8 @@ public class Logic {
 	private PropositionController propositionController;
 	private ResumeController resumeControler;
 	
-	public Logic(Board board) {
-		this.board = board;
+	public Logic() {
+		this.board = new Board();
 		this.attemptController = new AttemptController(this.board);
 		this.playController = new PlayController(this.board); 
 		this.propositionController = new PropositionController(this.board);
