@@ -1,25 +1,24 @@
 package mastermind.views.console;
 
-import mastermind.controllers.AttemptController;
-import mastermind.models.Board;
+import mastermind.controllers.Logic;
 import utils.Console;
 import mastermind.views.Messages;
 
 public class AttemptView {
 	
-	private AttemptController attemptController;
+	private Logic logic;
 	
-	public AttemptView(AttemptController attemptController) {
-		this.attemptController = attemptController;
+	public AttemptView(Logic logic) {
+		this.logic = logic;
 	}
 	
 	public void interact() {
 		Messages.LINE.writeln();
-		Messages.ATTEMPT.writeln(this.attemptController.getAttemptNumber());
+		Messages.ATTEMPT.writeln(this.logic.getAttemptNumber());
 		Messages.SEPARATOR.writeln();
-		for(int i=0; i<this.attemptController.getAttemptNumber(); i++) {
-			Console.instance().write(this.attemptController.getProposedCombination(i));
-			Messages.RESULT.writeln(this.attemptController.getBlacks(i), this.attemptController.getWhites(i));
+		for(int i=0; i<this.logic.getAttemptNumber(); i++) {
+			Console.instance().write(this.logic.getProposedCombination(i));
+			Messages.RESULT.writeln(this.logic.getBlacks(i), this.logic.getWhites(i));
 		}
 	}
 }

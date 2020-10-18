@@ -12,4 +12,7 @@ public class PlayController extends Controller {
 		return this.board.isWinner();
 	}
 
+	public int getAttemptNumber() {
+		return this.board.getAttemptNumber();
+	}
 }

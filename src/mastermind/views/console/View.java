@@ -1,18 +1,14 @@
 package mastermind.views.console;
 
-import mastermind.controllers.AttemptController;
-import mastermind.controllers.PlayController;
-import mastermind.controllers.PropositionController;
-import mastermind.controllers.ResumeController;
-import mastermind.models.Board;
+import mastermind.controllers.Logic;
 
 public class View extends mastermind.views.View{
 	private PlayView playView;
 	private ResumeView resumeView;
 	
-	public View(AttemptController attemptController, PlayController playController, PropositionController propositionController, ResumeController resumeController) {
-		this.playView = new PlayView(playController, attemptController, propositionController);
-		this.resumeView = new ResumeView(resumeController);
+	public View(Logic logic) {
+		this.playView = new PlayView(logic);
+		this.resumeView = new ResumeView(logic);
 	}
 
 	@Override

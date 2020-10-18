@@ -10,7 +10,4 @@ public class Controller {
 		this.board = board;
 	}
 	
-	public int getAttemptNumber() {
-		return this.board.getAttemptNumber();
-	}
 }
