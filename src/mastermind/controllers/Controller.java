@@ -3,7 +3,7 @@ package mastermind.controllers;
 import mastermind.models.Board;
 import mastermind.models.State;
 
-public class Controller {
+public abstract class Controller {
 
 	protected Board board;
 	protected State state;
@@ -25,4 +25,5 @@ public class Controller {
 		this.state.prev();
 	}
 	
+	public abstract void accept(ControllerVisitor controllerVisitor);
 }

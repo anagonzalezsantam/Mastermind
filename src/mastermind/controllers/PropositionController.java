@@ -18,4 +18,8 @@ public class PropositionController extends Controller {
 		return this.board.isWinner();
 	}
 
+	@Override
+	public void accept(ControllerVisitor controllerVisitor) {
+		controllerVisitor.visit(this);
+	}
 }

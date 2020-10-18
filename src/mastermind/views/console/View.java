@@ -1,12 +1,13 @@
 package mastermind.views.console;
 
 import mastermind.controllers.Controller;
+import mastermind.controllers.ControllerVisitor;
 import mastermind.controllers.PlayController;
 import mastermind.controllers.PropositionController;
 import mastermind.controllers.ResumeController;
 import mastermind.controllers.AttemptController;
 
-public class View extends mastermind.views.View{
+public class View extends mastermind.views.View implements ControllerVisitor{
 	private PlayView playView;
 	private ResumeView resumeView;
 	private AttemptView attemptView;
@@ -21,15 +22,27 @@ public class View extends mastermind.views.View{
 
 	@Override
 	public void interact(Controller controller) {
-		if(controller instanceof  PlayController) {
-			this.playView.interact((PlayController) controller);
-		} else if(controller instanceof ResumeController) {
-			this.resumeView.interact((ResumeController) controller);
-		} else if(controller instanceof PropositionController) {
-			this.propositionView.interact((PropositionController) controller);
-		} else {
-			this.attemptView.interact((AttemptController) controller);
-		}
+		controller.accept(this);
+	}
+
+	@Override
+	public void visit(AttemptController attemptController) {
+		this.attemptView.interact(attemptController);
+	}
+
+	@Override
+	public void visit(PropositionController propositionController) {
+		this.propositionView.interact(propositionController);
+	}
+
+	@Override
+	public void visit(PlayController playController) {
+		this.playView.interact(playController);
+	}
+
+	@Override
+	public void visit(ResumeController resumeController) {
+		this.resumeView.interact(resumeController);
 	}
 	
 }

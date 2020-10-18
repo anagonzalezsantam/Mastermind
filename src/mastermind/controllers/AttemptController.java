@@ -21,4 +21,11 @@ public class AttemptController extends Controller{
 		return this.board.getWhites(index);
 	}
 
+	@Override
+	public void accept(ControllerVisitor controllerVisitor) {
+		controllerVisitor.visit(this);
+	}
+
+	
+
 }
