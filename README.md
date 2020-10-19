@@ -106,7 +106,7 @@
           <h3 id="paquete-controller-models">Paquetes <em>mastermind.controllers</em> y <em>mastermind.models</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquetes_controllers_models.png" alt="paqueteControllersModels" width="1050" height="1222">
+              <img src="images/paquetes_controllers_models.png" alt="paqueteControllersModels" width="950" height="1122">
             </div>
           </div>
         </div>
