@@ -1,7 +1,6 @@
 package mastermind.views.console;
 
 import mastermind.controllers.AttemptController;
-import mastermind.controllers.Logic;
 import utils.Console;
 import mastermind.views.Messages;
 
