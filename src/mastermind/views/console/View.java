@@ -3,36 +3,23 @@ package mastermind.views.console;
 import mastermind.controllers.Controller;
 import mastermind.controllers.ControllerVisitor;
 import mastermind.controllers.PlayController;
-import mastermind.controllers.PropositionController;
 import mastermind.controllers.ResumeController;
-import mastermind.controllers.AttemptController;
+import mastermind.controllers.StartController;
 
 public class View extends mastermind.views.View implements ControllerVisitor{
+	private StartView startView;
 	private PlayView playView;
 	private ResumeView resumeView;
-	private AttemptView attemptView;
-	private PropositionView propositionView;
 	
 	public View() {
+		this.startView = new StartView();
 		this.playView = new PlayView();
 		this.resumeView = new ResumeView();
-		this.propositionView = new PropositionView();
-		this.attemptView = new AttemptView();
 	}
 
 	@Override
 	public void interact(Controller controller) {
 		controller.accept(this);
-	}
-
-	@Override
-	public void visit(AttemptController attemptController) {
-		this.attemptView.interact(attemptController);
-	}
-
-	@Override
-	public void visit(PropositionController propositionController) {
-		this.propositionView.interact(propositionController);
 	}
 
 	@Override
@@ -43,6 +30,12 @@ public class View extends mastermind.views.View implements ControllerVisitor{
 	@Override
 	public void visit(ResumeController resumeController) {
 		this.resumeView.interact(resumeController);
+	}
+
+	@Override
+	public void visit(StartController startController) {
+		this.startView.interact(startController);
+		
 	}
 	
 }
