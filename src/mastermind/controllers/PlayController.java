@@ -30,6 +30,10 @@ public class PlayController extends Controller {
 		return this.board.isWinner();
 	}
 	
+	public int getAttemptNumber() {
+		return this.board.getAttemptNumber();
+	}
+	
 	@Override
 	public void accept(ControllerVisitor controllerVisitor) {
 		controllerVisitor.visit(this);
