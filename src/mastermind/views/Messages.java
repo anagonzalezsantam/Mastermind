@@ -4,6 +4,9 @@ import utils.Console;
 
 public enum Messages {
 	TITTLE("--- MASTERMIND ---"),
+	PROPOSE_OPTION("Write a combination"),
+	UNDO_OPTION("Undo previus combination"),
+	REDO_OPTION("Redo previus combination"),
 	ATTEMPT("#number attempt(s):"), 
 	SEPARATOR("XXXX"), 
 	PROPOSITION("Propose a combination: "), 
@@ -14,10 +17,6 @@ public enum Messages {
 	LINE("");
 
 	private String message;
-
-	private Messages() {
-		
-	}
 	
 	private Messages(String message) {
 		this.message = message;

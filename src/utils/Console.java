@@ -21,11 +21,17 @@ public class Console {
 		this.write(line);
 		try {
 			input = this.bufferedReader.readLine();
-		} catch (Exception ex) {
-		}
+		} catch (Exception ex) {}
 		return input;
 	}
 
+	public int readInt() {
+		int input = 0;
+		try {
+			input = Integer.parseInt(this.bufferedReader.readLine());
+		} catch (Exception ex) {}
+		return input;
+	}
 
 	public void writeln() {
 		System.out.println();
