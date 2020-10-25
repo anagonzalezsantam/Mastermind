@@ -5,8 +5,8 @@ import utils.Console;
 public enum Messages {
 	TITTLE("--- MASTERMIND ---"),
 	PROPOSE_OPTION("Write a combination"),
-	UNDO_OPTION("Undo previus combination"),
-	REDO_OPTION("Redo previus combination"),
+	UNDO_OPTION("Undo previous combination"),
+	REDO_OPTION("Redo previous combination"),
 	ATTEMPT("#number attempt(s):"), 
 	SEPARATOR("XXXX"), 
 	PROPOSITION("Propose a combination: "), 

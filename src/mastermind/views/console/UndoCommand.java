@@ -11,14 +11,12 @@ public class UndoCommand extends Command {
 	
 	@Override
 	protected void execute() {
-		// TODO Auto-generated method stub
-		
+		this.playController.undo();
 	}
 
 	@Override
 	protected boolean isActive() {
-		// TODO Auto-generated method stub
-		return true;
+		return this.playController.isUndoable();
 	}
 
 }

@@ -1,9 +1,9 @@
 package mastermind.views;
 
-import mastermind.controllers.Controller;
+import mastermind.controllers.AcceptorController;
 
 public abstract class View {
 
-	public abstract void interact(Controller controller);
+	public abstract void interact(AcceptorController acceptorController);
 	
 }

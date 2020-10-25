@@ -1,12 +1,12 @@
 package mastermind.views.console;
 
-import mastermind.controllers.Controller;
+import mastermind.controllers.AcceptorController;
 import mastermind.controllers.ControllerVisitor;
 import mastermind.controllers.PlayController;
 import mastermind.controllers.ResumeController;
 import mastermind.controllers.StartController;
 
-public class View extends mastermind.views.View implements ControllerVisitor{
+public class View extends mastermind.views.View implements ControllerVisitor {
 	private StartView startView;
 	private PlayView playView;
 	private ResumeView resumeView;
@@ -18,8 +18,8 @@ public class View extends mastermind.views.View implements ControllerVisitor{
 	}
 
 	@Override
-	public void interact(Controller controller) {
-		controller.accept(this);
+	public void interact(AcceptorController acceptorController) {
+		acceptorController.accept(this);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class View extends mastermind.views.View implements ControllerVisitor{
 	@Override
 	public void visit(StartController startController) {
 		this.startView.interact(startController);
-		
 	}
+
 	
 }

@@ -3,7 +3,7 @@ package mastermind.controllers;
 import mastermind.models.Board;
 import mastermind.models.State;
 
-public class ResumeController extends Controller {
+public class ResumeController extends Controller implements AcceptorController {
 
 	public ResumeController(Board board, State state) {
 		super(board, state);
