@@ -12,7 +12,7 @@ public abstract class Command {
 
 	protected abstract boolean isActive();
 
-	String getTitle() {
+	public String getTitle() {
 		return this.title;
 	}
 }

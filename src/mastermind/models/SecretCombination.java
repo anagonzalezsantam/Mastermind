@@ -5,8 +5,6 @@ import java.util.Random;
 
 public class SecretCombination extends Combination{
 
-	private static final int MAX_SIZE = 4;
-	
 	public SecretCombination() {
 		super(generateSecretCombination());
 	}

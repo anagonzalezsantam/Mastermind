@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Combination {
 	protected ArrayList<String> colors;
+	protected static final int MAX_SIZE = 4;
 	private static final String BLUE = "b";
 	private static final String RED = "r";
 	private static final String GREEN = "g";

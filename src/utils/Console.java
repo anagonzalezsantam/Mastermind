@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 public class Console {
 
-	public static Console console;
+	private static Console console;
 	
 	public static Console instance() {
 		if (Console.console == null) {
