@@ -52,4 +52,12 @@ public class Board {
 		resultList = new ArrayList<>();
 	}
 	
+	public GameMemento createMemento() {
+		return new GameMemento(this.proposedList, this.resultList);
+	}
+	
+	public void setMemento(GameMemento gameMemento) {
+		this.proposedList = gameMemento.getProposedList();
+		this.resultList = gameMemento.getResultList();
+	}
 }

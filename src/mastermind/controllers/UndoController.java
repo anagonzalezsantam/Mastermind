@@ -1,20 +1,19 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class UndoController extends Controller {
 
-	public UndoController(Board board, State state) {
-		super(board, state);
+	public UndoController(Session session) {
+		super(session);
 	}
 	
 	public void undo() {
-		System.out.println("Haciendo undo");
+		this.session.undo();
 	}
 	
 	public boolean isUndoable() {
-		return true;
+		return this.session.isUndoable();
 	}
 
 }

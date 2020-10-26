@@ -1,17 +1,15 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class ResumeController extends Controller implements AcceptorController {
 
-	public ResumeController(Board board, State state) {
-		super(board, state);
+	public ResumeController(Session session) {
+		super(session);
 	}
 
 	public void reset() {
-		this.board.reset();
-		this.state.reset();
+		this.session.reset();
 	}
 	
 	@Override

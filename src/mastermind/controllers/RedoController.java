@@ -1,20 +1,19 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class RedoController extends Controller {
 
-	public RedoController(Board board, State state) {
-		super(board, state);
+	public RedoController(Session session) {
+		super(session);
 	}
 	
 	public void redo() {
-		System.out.println("Haciendo redo");
+		this.session.redo();
 	}
 
 	public boolean isRedoable() {
-		return true;
+		return this.session.isRedoable();
 	}
 
 }

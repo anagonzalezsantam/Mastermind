@@ -1,7 +1,6 @@
 package mastermind;
 
 import mastermind.controllers.AcceptorController;
-import mastermind.controllers.Controller;
 import mastermind.controllers.Logic;
 import mastermind.views.View;
 

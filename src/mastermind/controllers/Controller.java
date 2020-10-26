@@ -1,20 +1,17 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class Controller {
 
-	protected Board board;
-	protected State state;
+	protected Session session;
 	
-	public Controller(Board board, State state) {
-		this.board = board;
-		this.state = state;
+	public Controller(Session session) {
+		this.session = session;
 	}
 	
 	public void next() {
-		this.state.next();
+		this.session.next();
 	}
 	
 }

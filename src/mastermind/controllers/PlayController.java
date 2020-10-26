@@ -1,8 +1,7 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
 import mastermind.models.ProposedCombination;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class PlayController extends Controller implements AcceptorController{
 
@@ -10,11 +9,11 @@ public class PlayController extends Controller implements AcceptorController{
 	private UndoController undoController;
 	private RedoController redoController;
 	
-	public PlayController(Board board, State state) {
-		super(board, state);
-		this.actionController = new ActionController(board, state);
-		this.undoController = new UndoController(board, state);
-		this.redoController = new RedoController(board, state);
+	public PlayController(Session session) {
+		super(session);
+		this.actionController = new ActionController(session);
+		this.undoController = new UndoController(session);
+		this.redoController = new RedoController(session);
 	}
 	
 	public String getProposedCombination(int index) {

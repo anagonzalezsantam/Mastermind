@@ -1,12 +1,11 @@
 package mastermind.controllers;
 
-import mastermind.models.Board;
-import mastermind.models.State;
+import mastermind.models.Session;
 
 public class StartController extends Controller implements AcceptorController {
 
-	public StartController(Board board, State state) {
-		super(board, state);
+	public StartController(Session session) {
+		super(session);
 	}
 	
 	@Override
