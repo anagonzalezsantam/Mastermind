@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Mastermind. Solución 1.3. modelViewPresenter</h1>
+  <h1>Mastermind. Solución 2. mvp.pm.withComposite</h1>
   <div class="details">
     <span id="author" class="author">Ana González Santamaría</span><br>
     <span id="email" class="email"><a href="mailto:ana97gs@gmail.com">ana97gs@gmail.com</a></span><br>
@@ -18,14 +18,15 @@
   <div id="toc" class="toc">
     <div id="toctitle">Índice</div>
       <ul class="sectlevel1">
-        <li><a href="#requisitos-1-básica">Requisitos 1. Básica</a></li>
+        <li><a href="#requisitos-2-básica">Requisitos 2. Undo/Redo</a></li>
         <li><a href="#vista-de-lógicadiseño">Vista de Lógica/Diseño</a>
           <ul class="sectlevel2">
             <li><a href="#arquitectura">Arquitectura</a></li>
             <li><a href="#paquete-mastermind">Paquete <em>Mastermind</em></a></li>
-            <li><a href="#paquete-mastermind.views">Paquete <em>mastermind.views</em></a></li>
-            <li><a href="#paquete-views-controllers">Paquetes <em>mastermind.views.console</em> y <em>mastermind.controller</em></a></li>
-            <li><a href="#paquete-controller-models">Paquetes <em>mastermind.controllers</em> y <em>mastermind.models</em></a></li>
+            <li><a href="#paquete-mastermind.models">Paquete <em>mastermind.models</em></a></li>
+            <li><a href="#paquete-mastermind.views">Paquetes <em>mastermind.views</em> y <em>mastermind.utils</em></a></li>
+            <li><a href="#paquete-views-controllers">Paquete <em>mastermind.controller</em></a></li>
+            <li><a href="#relacion-controller-views">Relación <em>mastermind.controllers</em> y <em>mastermind.views</em></a></li>
           </ul>
         </li>
       </ul>
@@ -33,7 +34,7 @@
   </div>
   <div id="content">
     <div class="sect1">
-      <h2 id="requisitos-1-básica">Requisitos 1. Básica</h2>
+      <h2 id="requisitos-2-básica">Requisitos 2. Undo/Redo</h2>
       <div class="sectionbody">
         <table class="tableblock frame-all grid-all stretch">
           <colgroup>
@@ -48,7 +49,7 @@
                     <p><a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)"><strong>Wiki</strong></a> - <a href="https://www.youtube.com/watch?v=2-hTeg2M6GQ"><strong>Youtube</strong></a></p>
                     <div class="ulist">
                       <ul>
-                        <li><p><em>Funcionalidad: <strong>Básica</strong></em></p></li>
+                        <li><p><em>Funcionalidad: <strong>Básica + Undo/Redo</strong></em></p></li>
                         <li><p><em>Interfaz: <strong>Texto</strong></em></p></li>
                         <li><p><em>Distribución: <strong>Stand Alone</strong></em></p></li>
                         <li><p><em>Persistencia: <strong>No</strong></em></p></li>
@@ -87,26 +88,34 @@
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-mastermind.views">Paquete <em>mastermind.views</em></h3>
+          <h3 id="paquete-mastermind.models">Paquete <em>mastermind.models</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_mastermind.views.png" alt="paqueteViews" width="1400" height="895">
+              <img src="images/paquete_models.png" alt="paqueteModels" width="1160" height="1180">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-views-controllers">Paquetes <em>mastermind.views.console</em> y <em>mastermind.controller</em></h3>
+          <h3 id="paquete-mastermind.views">Paquetes <em>mastermind.views</em> y <em>mastermind.utils</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquetes_vies_controllers.png" alt="paquetesViewsControllers" width="1500" height="470">
+              <img src="images/paquete_views_y_utils.png" alt="paqueteViews" width="1000" height="1650">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-controller-models">Paquetes <em>mastermind.controllers</em> y <em>mastermind.models</em></h3>
+          <h3 id="paquete-views-controllers">Paquete <em>mastermind.controller</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquetes_controllers_models.png" alt="paqueteControllersModels" width="950" height="1122">
+              <img src="images/paquete_controllers.png" alt="paqueteControllers" width="1160" height="1180">
+            </div>
+          </div>
+        </div>
+        <div class="sect2">
+          <h3 id="relacion-controller-views">Relación <em>mastermind.controllers</em> y <em>mastermind.views</em></h3>
+          <div class="imageblock">
+            <div class="content">
+              <img src="images/relacion_views_controllers.png" alt="relacionViewsControllers" width="1290" height="820">
             </div>
           </div>
         </div>
