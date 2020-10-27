@@ -41,6 +41,7 @@ public class Session {
 	public void reset() {
 		this.state.reset();
 		this.board.reset();
+		this.registry.reset();
 	}
 	
 	public void next() {

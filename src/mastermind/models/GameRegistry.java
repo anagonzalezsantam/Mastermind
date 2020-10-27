@@ -14,6 +14,12 @@ public class GameRegistry {
 		this.mementos = new ArrayList<>();
 		this.mementos.add(this.board.createMemento());
 	}
+	
+	public void reset() {
+		this.current = 0;
+		this.mementos = new ArrayList<>();
+		this.mementos.add(this.board.createMemento());
+	}
 
 	public void undo() {
 		this.current--;
