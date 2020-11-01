@@ -1,15 +1,20 @@
 package mastermind.models;
 
+import mastermind.distributed.dispatchers.FrameType;
+import utils.TCPIP;
+
 public class Session {
 
 	private Board board;
 	private State state;
 	private GameRegistry registry;
+	private TCPIP tcpip;
 	
-	public Session() {
+	public Session(TCPIP tcpip) {
 		this.board = new Board();
 		this.state = new State();
 		this.registry = new GameRegistry(this.board);
+		this.tcpip = tcpip;
 	}
 	
 	public int getAttemptNumber() {
@@ -49,7 +54,12 @@ public class Session {
 	}
 	
 	public StateValues getStateValue() {
-		return this.state.getStateValue();
+		if(this.tcpip == null) {			
+			return this.state.getStateValue();
+		} else {
+			this.tcpip.send(FrameType.STATE.name());
+			return StateValues.values()[this.tcpip.receiveInt()];
+		}
 	}
 	
 	public void undo() {
@@ -66,6 +76,14 @@ public class Session {
 
 	  public boolean isRedoable() {
 	    return this.registry.isRedoable();
+	  }
+	  
+	  public TCPIP getTCPIP() {
+		  return this.tcpip;
+	  }
+	  
+	  public boolean isStandalone() {
+		  return this.tcpip == null;
 	  }
 	
 }

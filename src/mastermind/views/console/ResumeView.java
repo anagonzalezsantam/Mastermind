@@ -9,10 +9,7 @@ public class ResumeView {
 	public void interact(ResumeController resumeController) {
 		String answer = Console.instance().readString(Messages.RESUME.toString());
 		Messages.LINE.writeln();
-		if(answer.toLowerCase().equals("y")) {
-			resumeController.reset();
-		}else {
-			resumeController.next();
-		}
+		resumeController.reset(answer.toLowerCase().equals("y"));
+		
 	}
 }

@@ -10,7 +10,7 @@ public enum Messages {
 	ATTEMPT("#number attempt(s):"), 
 	SEPARATOR("XXXX"), 
 	PROPOSITION("Propose a combination: "), 
-	RESULT(" ---> #num_b black and #num_w white"), 
+	RESULT("#proposition ---> #num_b black and #num_w white"), 
 	WINNER("You've won!!! ;-)"),
 	LOOSER("You've lost!!! :-("),
 	RESUME("RESUME? (y/n):"),
@@ -34,8 +34,12 @@ public enum Messages {
 		Console.instance().writeln(this.message.replaceAll("#number", String.valueOf(num)));
 	}
 	
-	public void writeln(int numB, int numW) {
-		Console.instance().writeln(this.message.replaceAll("#num_b", String.valueOf(numB)).replaceAll("#num_w", String.valueOf(numW)));
+	public void writeln(String result) {
+		String[] parts = result.split("-");
+		String prop = parts[0];
+		String numB = parts[1];
+		String numW = parts[2];
+		Console.instance().writeln(this.message.replaceAll("#proposition", prop).replaceAll("#num_b", String.valueOf(numB)).replaceAll("#num_w", String.valueOf(numW)));
 	}
 
 	@Override

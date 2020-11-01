@@ -1,5 +1,6 @@
 package mastermind.controllers;
 
+import mastermind.distributed.dispatchers.FrameType;
 import mastermind.models.ProposedCombination;
 import mastermind.models.Session;
 
@@ -11,49 +12,90 @@ public class PlayController extends Controller implements AcceptorController{
 	
 	public PlayController(Session session) {
 		super(session);
-		this.actionController = new ActionController(session);
-		this.undoController = new UndoController(session);
-		this.redoController = new RedoController(session);
+		if(this.session.isStandalone()) {
+			this.actionController = new ActionController(session);
+			this.undoController = new UndoController(session);
+			this.redoController = new RedoController(session);			
+		}
 	}
 	
-	public String getProposedCombination(int index) {
-		return this.actionController.getProposedCombination(index);
+	public String getResultLine(int index) {
+		if(this.session.isStandalone()) {
+			return this.actionController.getProposedCombination(index) + "-" + this.actionController.getBlacks(index) + "-" + this.actionController.getWhites(index);			
+		} else {
+			this.session.getTCPIP().send(FrameType.RESULT.name());
+			this.session.getTCPIP().send(index);
+			return this.session.getTCPIP().receiveLine();
+		}
 	}
-	
-	public int getBlacks(int index) {
-		return this.actionController.getBlacks(index);
-	}
-	
-	public int getWhites(int index) {
-		return this.actionController.getWhites(index);
-	}
-	
+		
 	public void addProposedCombination(ProposedCombination proposed) {
-		this.actionController.addProposedCombination(proposed);
+		if(this.session.isStandalone()) {
+			this.actionController.addProposedCombination(proposed);			
+		} else {
+			this.session.getTCPIP().send(FrameType.PROPOSITION.name());
+			this.session.getTCPIP().send(proposed.toString());
+		}
 	}
 	
 	public boolean isWinner() {
-		return this.actionController.isWinner();
+		if(this.session.isStandalone()) {
+			return this.actionController.isWinner();			
+		} else {
+			this.session.getTCPIP().send(FrameType.IS_WINNER.name());
+			return this.session.getTCPIP().receiveBoolean();
+		}
 	}
 	
 	public int getAttemptNumber() {
-		return this.actionController.getAttemptNumber();
+		if(this.session.isStandalone()) {
+			return this.actionController.getAttemptNumber();			
+		} else {
+			this.session.getTCPIP().send(FrameType.ATTEMPT.name());
+			return this.session.getTCPIP().receiveInt();
+		}
 	}
 	
 	public void undo() {
-		this.undoController.undo();
+		if(this.session.isStandalone()) {			
+			this.undoController.undo();
+		}else {
+			this.session.getTCPIP().send(FrameType.UNDO.name());
+		}
 	}
 	
 	public boolean isUndoable() {
-		return this.undoController.isUndoable();
+		if(this.session.isStandalone()) {			
+			return this.undoController.isUndoable();
+		}else {
+			this.session.getTCPIP().send(FrameType.IS_UNDOABLE.name());
+			return this.session.getTCPIP().receiveBoolean();
+		}
 	}
 	
 	public void redo() {
-		this.redoController.redo();
+		if(this.session.isStandalone()) {			
+			this.redoController.redo();
+		}else {
+			this.session.getTCPIP().send(FrameType.REDO.name());
+		}
 	}
 	
 	public boolean isRedoable() {
-		return this.redoController.isRedoable();
+		if(this.session.isStandalone()) {			
+			return this.redoController.isRedoable();
+		}else {
+			this.session.getTCPIP().send(FrameType.IS_REDOABLE.name());
+			return this.session.getTCPIP().receiveBoolean();
+		}
+	}
+	
+	public void end() {
+		if(this.session.isStandalone()) {	
+			this.session.next();
+		} else {
+			this.session.getTCPIP().send(FrameType.END.name());
+		}
 	}
 	
 	

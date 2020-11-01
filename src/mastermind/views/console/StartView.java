@@ -6,6 +6,6 @@ import mastermind.views.Messages;
 public class StartView {
 	public void interact(StartController startController) {
 		Messages.TITTLE.writeln();
-		startController.next();
+		startController.start();
 	}
 }

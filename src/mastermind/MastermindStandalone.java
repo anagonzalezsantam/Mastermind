@@ -2,14 +2,17 @@ package mastermind;
 
 import mastermind.views.console.View;
 
-public class ConsoleMastermind extends Mastermind {
+public class MastermindStandalone extends Mastermind {
+	
+	protected boolean isStandalone() {
+		return true;
+	}
 
-	@Override
 	protected View createView() {
 		return new View();
 	}
 	
 	public static void main(String[] args) {
-		new ConsoleMastermind().play();
+		new MastermindStandalone().play();
 	}
 }

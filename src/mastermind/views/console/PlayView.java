@@ -23,6 +23,6 @@ public class PlayView {
 		} else {
 			Messages.LOOSER.writeln();
 		}
-		playController.next();
+		playController.end();
 	}
 }

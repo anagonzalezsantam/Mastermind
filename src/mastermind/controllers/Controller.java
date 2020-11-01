@@ -1,6 +1,7 @@
 package mastermind.controllers;
 
 import mastermind.models.Session;
+import mastermind.models.StateValues;
 
 public class Controller {
 
@@ -12,6 +13,10 @@ public class Controller {
 	
 	public void next() {
 		this.session.next();
+	}
+	
+	public StateValues getValueState() {
+		return this.session.getStateValue();
 	}
 	
 }
