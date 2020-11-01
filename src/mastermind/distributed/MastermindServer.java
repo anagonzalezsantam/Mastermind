@@ -5,10 +5,10 @@ import mastermind.distributed.dispatchers.DispatcherPrototype;
 public class MastermindServer {
 
 	private DispatcherPrototype dispatcherPrototype;
-	private LogicServer logicServer;
+	private LogicServerImplementation logicServer;
 	
 	public MastermindServer() {
-		this.logicServer = new LogicServer(true);
+		this.logicServer = new LogicServerImplementation();
 		this.dispatcherPrototype = this.logicServer.createDispatcherPrototype();
 	}
 	

@@ -4,12 +4,14 @@ import mastermind.controllers.PlayController;
 
 public class EndDispatcher extends Dispatcher{
 
+	private PlayController playController;
+	
 	public EndDispatcher(PlayController playController) {
-		super(playController);
+		this.playController = playController;
 	}
 
 	public void dispatch() {
-		((PlayController)this.acceptorController).end();
+		this.playController.end();
 	}
 
 }

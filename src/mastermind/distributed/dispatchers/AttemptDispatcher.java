@@ -4,12 +4,14 @@ import mastermind.controllers.PlayController;
 
 public class AttemptDispatcher extends Dispatcher {
 
+	private PlayController playController;
+	
 	public AttemptDispatcher(PlayController playController) {
-		super(playController);
+		this.playController = playController;
 	}
 
 	public void dispatch() {
-		this.tcpip.send(((PlayController)this.acceptorController).getAttemptNumber());
+		this.tcpip.send(this.playController.getAttemptNumber());
 	}
 
 }

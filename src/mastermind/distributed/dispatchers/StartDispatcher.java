@@ -4,13 +4,15 @@ import mastermind.controllers.StartController;
 
 public class StartDispatcher extends Dispatcher {
 
+	private StartController startController;
+	
 	public StartDispatcher(StartController startController) {
-		super(startController);
+		this.startController = startController;
 	}
 
 	@Override
 	public void dispatch() {
-		((StartController)this.acceptorController).start();
+		this.startController.start();
 	}
 
 }

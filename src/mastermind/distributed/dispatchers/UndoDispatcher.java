@@ -4,12 +4,14 @@ import mastermind.controllers.PlayController;
 
 public class UndoDispatcher extends Dispatcher {
 
+	private PlayController playController;
+	
 	public UndoDispatcher(PlayController playController) {
-		super(playController);
+		this.playController = playController;
 	}
 
 	public void dispatch() {
-		((PlayController)this.acceptorController).undo();
+		this.playController.undo();
 	}
 
 }

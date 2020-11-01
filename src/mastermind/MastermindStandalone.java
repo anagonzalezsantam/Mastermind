@@ -1,11 +1,13 @@
 package mastermind;
 
+import mastermind.controllers.Logic;
+import mastermind.controllers.implementation.LogicImplementation;
 import mastermind.views.console.View;
 
 public class MastermindStandalone extends Mastermind {
 	
-	protected boolean isStandalone() {
-		return true;
+	protected Logic createLogic() {
+		return new LogicImplementation();
 	}
 
 	protected View createView() {

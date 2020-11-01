@@ -4,13 +4,15 @@ import mastermind.controllers.ResumeController;
 
 public class ResumeDispatcher extends Dispatcher {
 
+	private ResumeController resumeController;
+	
 	public ResumeDispatcher(ResumeController resumeController) {
-		super(resumeController);
+		this.resumeController = resumeController;
 	}
 
 	public void dispatch() {
 		boolean isResumed = this.tcpip.receiveBoolean();
-		((ResumeController)this.acceptorController).reset(isResumed);
+		this.resumeController.reset(isResumed);
 	}
 
 }

@@ -4,12 +4,14 @@ import mastermind.controllers.PlayController;
 
 public class WinnerDispatcher extends Dispatcher {
 
+	private PlayController playController;
+	
 	public WinnerDispatcher(PlayController playController) {
-		super(playController);
+		this.playController = playController;
 	}
 
 	public void dispatch() {
-		this.tcpip.send(((PlayController)this.acceptorController).isWinner());
+		this.tcpip.send(this.playController.isWinner());
 	}
 
 }
