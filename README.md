@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Mastermind. Solución 1.3. modelViewPresenter</h1>
+  <h1>Mastermind. Solución 4. modelViewPresenter con vista pasiva</h1>
   <div class="details">
     <span id="author" class="author">Ana González Santamaría</span><br>
     <span id="email" class="email"><a href="mailto:ana97gs@gmail.com">ana97gs@gmail.com</a></span><br>
@@ -22,10 +22,7 @@
         <li><a href="#vista-de-lógicadiseño">Vista de Lógica/Diseño</a>
           <ul class="sectlevel2">
             <li><a href="#arquitectura">Arquitectura</a></li>
-            <li><a href="#paquete-mastermind">Paquete <em>Mastermind</em></a></li>
-            <li><a href="#paquete-mastermind.views">Paquete <em>mastermind.views</em></a></li>
-            <li><a href="#paquete-views-controllers">Paquetes <em>mastermind.views.console</em> y <em>mastermind.controller</em></a></li>
-            <li><a href="#paquete-controller-models">Paquetes <em>mastermind.controllers</em> y <em>mastermind.models</em></a></li>
+            <li><a href="#clases-mastermind">Clases</em></a></li>
           </ul>
         </li>
       </ul>
@@ -74,39 +71,15 @@
           <h3 id="arquitectura">Arquitectura</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/arquitectura_pm.png" alt="MastermindArquitecture" width="400" height="650">
+              <img src="images/paquete-pv.png" alt="MastermindArquitecture" width="400" height="635">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
+          <h3 id="clases-mastermind">Clases</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_mastermind.png" alt="paqueteMastermind" width="600" height="440">
-            </div>
-          </div>
-        </div>
-        <div class="sect2">
-          <h3 id="paquete-mastermind.views">Paquete <em>mastermind.views</em></h3>
-          <div class="imageblock">
-            <div class="content">
-              <img src="images/paquete_mastermind.views.png" alt="paqueteViews" width="1400" height="895">
-            </div>
-          </div>
-        </div>
-        <div class="sect2">
-          <h3 id="paquete-views-controllers">Paquetes <em>mastermind.views.console</em> y <em>mastermind.controller</em></h3>
-          <div class="imageblock">
-            <div class="content">
-              <img src="images/paquetes_vies_controllers.png" alt="paquetesViewsControllers" width="1500" height="470">
-            </div>
-          </div>
-        </div>
-        <div class="sect2">
-          <h3 id="paquete-controller-models">Paquetes <em>mastermind.controllers</em> y <em>mastermind.models</em></h3>
-          <div class="imageblock">
-            <div class="content">
-              <img src="images/paquetes_controllers_models.png" alt="paqueteControllersModels" width="950" height="1122">
+              <img src="images/clases-pv.png" alt="paqueteMastermind" width="1750" height="1545">
             </div>
           </div>
         </div>
