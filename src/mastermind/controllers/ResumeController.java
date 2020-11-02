@@ -1,6 +1,5 @@
 package mastermind.controllers;
 
-import mastermind.distributed.dispatchers.DispatcherVisitor;
 import mastermind.models.Session;
 
 public abstract class ResumeController extends Controller implements AcceptorController {
@@ -14,10 +13,5 @@ public abstract class ResumeController extends Controller implements AcceptorCon
 	@Override
 	public void accept(ControllerVisitor controllerVisitor) {
 		controllerVisitor.visit(this);
-	}
-	
-	@Override
-	public AcceptorController acceptDispatch(DispatcherVisitor dispatcherVisitor) {
-		return dispatcherVisitor.visit(this);
 	}
 }
