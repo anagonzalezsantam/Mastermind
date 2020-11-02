@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Mastermind. Solución 2. mvp.pm.withComposite</h1>
+  <h1>Mastermind. Solución 3. mvp.pm. Client/Server without Proxy</h1>
   <div class="details">
     <span id="author" class="author">Ana González Santamaría</span><br>
     <span id="email" class="email"><a href="mailto:ana97gs@gmail.com">ana97gs@gmail.com</a></span><br>
@@ -18,15 +18,15 @@
   <div id="toc" class="toc">
     <div id="toctitle">Índice</div>
       <ul class="sectlevel1">
-        <li><a href="#requisitos-2-básica">Requisitos 2. Undo/Redo</a></li>
+        <li><a href="#requisitos-3">Requisitos 3. Cliente/Servidor</a></li>
         <li><a href="#vista-de-lógicadiseño">Vista de Lógica/Diseño</a>
           <ul class="sectlevel2">
             <li><a href="#arquitectura">Arquitectura</a></li>
             <li><a href="#paquete-mastermind">Paquete <em>Mastermind</em></a></li>
-            <li><a href="#paquete-mastermind.models">Paquete <em>mastermind.models</em></a></li>
-            <li><a href="#paquete-mastermind.views">Paquetes <em>mastermind.views</em> y <em>mastermind.utils</em></a></li>
-            <li><a href="#paquete-views-controllers">Paquete <em>mastermind.controller</em></a></li>
-            <li><a href="#relacion-controller-views">Relación <em>mastermind.controllers</em> y <em>mastermind.views</em></a></li>
+            <li><a href="#paquete-views">Paquete <em>mastermind.views</em></a></li>
+            <li><a href="#paquete-controllers">Paquetes <em>mastermind.controllers</em></a></li>
+            <li><a href="#paquete-models">Paquete <em>mastermind.models</em></a></li>
+            <li><a href="#paquete-distributed">Paquete <em>mastermind.distributed</em></a></li>
           </ul>
         </li>
       </ul>
@@ -34,7 +34,7 @@
   </div>
   <div id="content">
     <div class="sect1">
-      <h2 id="requisitos-2-básica">Requisitos 2. Undo/Redo</h2>
+      <h2 id="requisitos-2-básica">Requisitos 3. Cliente/Servidor</h2>
       <div class="sectionbody">
         <table class="tableblock frame-all grid-all stretch">
           <colgroup>
@@ -51,7 +51,7 @@
                       <ul>
                         <li><p><em>Funcionalidad: <strong>Básica + Undo/Redo</strong></em></p></li>
                         <li><p><em>Interfaz: <strong>Texto</strong></em></p></li>
-                        <li><p><em>Distribución: <strong>Stand Alone</strong></em></p></li>
+                        <li><p><em>Distribución: <strong>Stand Alone + Client/Server</strong></em></p></li>
                         <li><p><em>Persistencia: <strong>No</strong></em></p></li>
                       </ul>
                     </div> 
@@ -75,7 +75,7 @@
           <h3 id="arquitectura">Arquitectura</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/arquitectura_pm.png" alt="MastermindArquitecture" width="400" height="650">
+              <img src="images/paquetes.png" alt="MastermindArquitecture" width="550" height="100">
             </div>
           </div>
         </div>
@@ -83,39 +83,39 @@
           <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_mastermind.png" alt="paqueteMastermind" width="600" height="440">
+              <img src="images/paquete-mastermind.png" alt="paqueteMastermind" width="660" height="430">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-mastermind.models">Paquete <em>mastermind.models</em></h3>
+          <h3 id="paquete-views">Paquete <em>mastermind.views</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_models.png" alt="paqueteModels" width="1160" height="1180">
+              <img src="images/paquete_views.png" alt="paqueteViews" width="1400" height="1380">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-mastermind.views">Paquetes <em>mastermind.views</em> y <em>mastermind.utils</em></h3>
+          <h3 id="paquete-controllers">Paquetes <em>mastermind.controllers</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_views_y_utils.png" alt="paqueteViews" width="1000" height="1650">
+              <img src="images/paquete-controllers.png" alt="paqueteControllers" width="1100" height="775">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="paquete-views-controllers">Paquete <em>mastermind.controller</em></h3>
+          <h3 id="paquete-models">Paquete <em>mastermind.models</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_controllers.png" alt="paqueteControllers" width="1160" height="1180">
+              <img src="images/paquete-models.png" alt="paqueteModels" width="1100" height="990">
             </div>
           </div>
         </div>
         <div class="sect2">
-          <h3 id="relacion-controller-views">Relación <em>mastermind.controllers</em> y <em>mastermind.views</em></h3>
+          <h3 id="paquete-distributed">Paquete <em>mastermind.distributed</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/relacion_views_controllers.png" alt="relacionViewsControllers" width="1290" height="820">
+              <img src="images/paquete-distributed.png" alt="paqueteDistributed" width="1300" height="935">
             </div>
           </div>
         </div>
