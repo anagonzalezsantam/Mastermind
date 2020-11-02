@@ -15,11 +15,7 @@ public class State {
 	public void next() {
 		this.stateValue = StateValues.values()[this.stateValue.ordinal() + 1];	
 	}
-	
-	public void prev() {
-		this.stateValue = StateValues.values()[this.stateValue.ordinal() - 1];
-	}
-	
+		
 	public StateValues getStateValue() {
 		return this.stateValue;
 	}
