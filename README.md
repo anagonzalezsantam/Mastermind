@@ -79,7 +79,7 @@
           <h3 id="clases-mastermind">Clases</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/clases-pv.png" alt="paqueteMastermind" width="1750" height="1545">
+              <img src="images/clases-pv.png" alt="paqueteMastermind" width="1600" height="1415">
             </div>
           </div>
         </div>
