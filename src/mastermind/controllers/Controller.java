@@ -20,10 +20,6 @@ public abstract class Controller {
 	public void next() {
 		this.state.next();
 	}
-	
-	public void prev() {
-		this.state.prev();
-	}
-	
-	public abstract void accept(ControllerVisitor controllerVisitor);
+		
+	public abstract void control();
 }
