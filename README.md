@@ -34,7 +34,7 @@
   </div>
   <div id="content">
     <div class="sect1">
-      <h2 id="requisitos-2-básica">Requisitos 3. Cliente/Servidor</h2>
+      <h2 id="requisitos-3">Requisitos 3. Cliente/Servidor</h2>
       <div class="sectionbody">
         <table class="tableblock frame-all grid-all stretch">
           <colgroup>
@@ -75,7 +75,7 @@
           <h3 id="arquitectura">Arquitectura</h3>
           <div class="imageblock" style="text-align: center">
             <div class="content">
-              <img src="images/paquetes.png" alt="MastermindArquitecture" width="550" height="100">
+              <img src="images/paquetes.png" alt="MastermindArquitecture" width="1000" height="550">
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
           <h3 id="paquete-views">Paquete <em>mastermind.views</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete_views.png" alt="paqueteViews" width="1400" height="1380">
+              <img src="images/paquete-views.png" alt="paqueteViews" width="1400" height="1380">
             </div>
           </div>
         </div>
