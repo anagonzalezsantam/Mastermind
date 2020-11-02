@@ -10,6 +10,7 @@ public class Combination {
 	private static final String YELLOW = "y";
 	private static final String ORANGE = "o";
 	private static final String PURPLE = "p";
+	protected static final int MAX_SIZE = 4;
 	
 	public Combination(ArrayList<String> colors) {
 		this.colors = colors;

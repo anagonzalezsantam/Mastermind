@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ProposedCombination extends Combination{
-	
-	private static final int MAX_SIZE = 4;
-	
+		
 	public ProposedCombination(String string) {
 		super(getListFromString(string));
 	}
