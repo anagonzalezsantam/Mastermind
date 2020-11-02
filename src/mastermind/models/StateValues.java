@@ -2,8 +2,7 @@ package mastermind.models;
 
 public enum StateValues {
 	INITIAL,
-	RESULTS,
-	PROPOSITION,
+	GAME,
 	FINISH,
 	EXIT;
 }
