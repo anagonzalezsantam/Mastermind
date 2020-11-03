@@ -83,7 +83,7 @@
           <h3 id="paquete-mastermind">Paquete <em>mastermind</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete-mastermind.png" alt="paqueteMastermind" width="660" height="430">
+              <img src="images/paquete-mastermind.png" alt="paqueteMastermind" width="660" height="600">
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
           <h3 id="paquete-controllers">Paquetes <em>mastermind.controllers</h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete-controllers.png" alt="paqueteControllers" width="1100" height="775">
+              <img src="images/paquete-controller.png" alt="paqueteControllers" width="1500" height="940">
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@
           <h3 id="paquete-models">Paquete <em>mastermind.models</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete-models.png" alt="paqueteModels" width="1100" height="990">
+              <img src="images/paquete-models.png" alt="paqueteModels" width="1100" height="1030">
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@
           <h3 id="paquete-distributed">Paquete <em>mastermind.distributed</em></h3>
           <div class="imageblock">
             <div class="content">
-              <img src="images/paquete-distributed.png" alt="paqueteDistributed" width="1300" height="935">
+              <img src="images/paquete-distributed.png" alt="paqueteDistributed" width="1500" height="980">
             </div>
           </div>
         </div>
